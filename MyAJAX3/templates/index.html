@@ -1,0 +1,25 @@
+<h1>Enter name to search data</h1>
+<script type="text/javascript">
+
+	function shwodata(a) 
+	{
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function()
+        {	
+            document.getElementById("res").innerHTML = xmlhttp.responseText;
+        }
+        xmlhttp.open("GET","ajaxdata?q="+a,true);
+        xmlhttp.send();
+    }
+	
+</script>
+<body>  
+    <marquee><h1>This is an example of ajax</h1></marquee>  
+<form name="vinform">  
+<input type="text" name="t1" style="margin-left:100px; width:500px; height:40px;" 
+onkeyup="shwodata(this.value)"/>  
+</form>  
+  
+<div id="res"> </div>  
+  
+</body>  

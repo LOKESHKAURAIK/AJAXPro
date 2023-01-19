@@ -1,0 +1,10 @@
+<table border="1px" cellpadding="2px" align="center" >
+	<tr>
+		<th>Student Name</th><th>Email</th><th>Address</th>
+	</tr>
+	{% for q in res %}
+        <tr>
+            <td>{{q.sname}}</td><td>{{q.email}}</td><td>{{q.address}}</td>
+        </tr>    
+    {% endfor %}
+</table>
